@@ -148,6 +148,102 @@ h1 {
 
 }
 
+.section-photos{
+      width: 100vw;
+      height: 100vh;
+      background-color: #000;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+}
+
+.section-photos h1{
+      margin-top: 10px;
+      color: #fad6a5;
+      font-size: 2.5rem;
+}
+.photos-container{
+      width: 900px;
+      height: 400px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      margin: 15px;
+      padding-top: 40px;
+}
+
+.photos p{
+      color: #ffffff;
+      padding-left: 10px;
+      width: 100%;
+      height: 35px;
+      align-content: center;
+      background: linear-gradient(
+            to top,
+            rgba(0, 0, 0, 1),
+            rgba(0, 0, 0, 0.9) 30%,
+            rgba(0, 0, 0, 0.7) 60%,
+            rgba(0, 0, 0, 0.5) 80%,
+            rgba(0, 0, 0, 0.2) 95%,
+            transparent 100%)
+}
+
+.photos{
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: end;
+      transition: filter 0.3s ease, transform 0.3s ease; 
+
+}
+
+.photo1{
+      background-image: url('/img/nascimento.jpg');
+      background-repeat: no-repeat;
+      background-size: cover;
+      
+}
+
+.photo2{
+      background-image: url('/img/batom.jpg');
+      background-repeat: no-repeat;
+      background-size: cover;
+}
+
+.photo3{
+      background-image: url('/img/casamento.jpg');
+      background-repeat: no-repeat;
+      background-size: cover;
+}
+
+.photo4{
+      background-image: url('/img//gestante.jpg');
+      background-repeat: no-repeat;
+      background-size: cover;
+}
+
+.photo5{
+      background-image: url('/img/bolo.jpg');
+      background-repeat: no-repeat;
+      background-size: cover;
+}
+
+.photo6{
+      background-repeat: no-repeat;
+      background-image: url('/img/passaro.jpg');
+      background-size: cover;
+}
+
+.photos:hover{
+      transform: scale(1.2); 
+      cursor: pointer;
+      z-index: 1;
+}
+
+.preto-e-branco {
+      filter: grayscale(100%); /* Aplica o filtro de escala de cinza */
+      transition: filter 0.3s; /* Transição suave para o filtro */
+}
+
 @media (max-width: 978px) {
 
       .container::after,
@@ -174,12 +270,17 @@ h1 {
             font-size: 39px;
       }
 
+      .photos-container{
+            grid-template-columns: repeat(2, 150px);
+            justify-content: center;
+      }
+
 }
 
 @media (max-width: 738px) {
       .banner-image {
-            width: 200px;
-            height: 300px;
+            width: 40%;
+            height: 40%;
             border-radius: 15px;
 
       }
@@ -293,6 +394,7 @@ h1 {
       }
 
       .text-content {
+            padding-left: 20%;
             height: 250px;
             padding-top: 35px;
       }
@@ -314,6 +416,7 @@ h1 {
 
       .banner-image {
             height: 250px;
+            width: 200px;
             padding-top: 20px;
       }
 }
