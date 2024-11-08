@@ -14,6 +14,7 @@ body {
       height: 100%;
       margin: 0;
       -webkit-animation: slidein 100s infinite alternate;
+      -webkit-background-size: cover;
       animation: slidein 100s infinite alternate;
 }
 
@@ -128,7 +129,7 @@ h1 {
       font-weight: 700;
       transition: background-color 0.3s ease, color 0.3s ease;
       appearance: none;
-      -webkit-appearance: none;
+      color: #000;
 }
 
 .btn-more:hover {
@@ -425,9 +426,6 @@ h1 {
             display: flex;
       }
 
-      body {
-            background-attachment: scroll;
-      }
 }
 
 
