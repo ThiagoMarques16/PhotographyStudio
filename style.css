@@ -6,8 +6,8 @@
       box-sizing: border-box;
 }
 
-body {
-      background-image: url('https://images.unsplash.com/photo-1471275382285-68e99fabd60a?q=80&w=1469&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+/* body {
+      background-image: url('/img/photo.jpg');
       background-size: cover;
       background-position: center center;
       background-attachment: fixed;
@@ -16,11 +16,12 @@ body {
       -webkit-animation: slidein 100s infinite alternate;
       -webkit-background-size: cover;
       animation: slidein 100s infinite alternate;
-}
+} */
 
 .header {
       width: 100%;
       height: 8vh;
+      position: absolute;
       display: flex;
       align-items: center;
       justify-content: space-around;
@@ -83,8 +84,13 @@ h1 {
 .home-container {
       display: flex;
       align-items: center;
+      justify-content: start;
       width: 100%;
-      height: 92vh;
+      height: 100vh;
+      background-image: url('/img/photo.jpg');
+      background-size: cover;
+      background-position: center;
+      animation: slidein 50s infinite alternate;
 }
 
 .container {
@@ -281,14 +287,16 @@ h1 {
 }
 
 @keyframes slidein {
-      from {
-            background-position: center top;
+      0% {
+          background-position: center 10%;   
       }
-
-      to {
-            background-position: center bottom;
+      50% {
+          background-position: center center; 
       }
-}
+      100% {
+          background-position: center 10%; 
+      }
+  }
 
 @keyframes fadeIn {
       from {
