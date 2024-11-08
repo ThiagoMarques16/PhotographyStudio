@@ -8,7 +8,7 @@ const textElement = document.querySelector('.text-info');
 hamburgerMenu.addEventListener('click', () => {
       hamburgerMenu.classList.toggle('activated');
 
-      // Aplica a classe 'side' a todos os elementos de 'navigation-buttons'
+     
       navigationButtons.forEach(button => {
             button.classList.toggle('side');
       });
@@ -33,14 +33,14 @@ photos.forEach(photo => {
 function activateFadeIn(entries, observer) {
       entries.forEach(entry => {
           if (entry.isIntersecting) {
-              entry.target.classList.add('fade-in');  // Aplica a animação de fade in
-              observer.unobserve(entry.target); // Para evitar que o efeito seja reativado
+              entry.target.classList.add('fade-in'); 
+              observer.unobserve(entry.target); 
           }
       });
   }
 
   const observer = new IntersectionObserver(activateFadeIn, {
-      threshold: 0.5  // Ativa o efeito quando 50% do elemento estiver visível
+      threshold: 0.5  
   });
 
 observer.observe(textElement);
