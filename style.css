@@ -6,18 +6,6 @@
       box-sizing: border-box;
 }
 
-/* body {
-      background-image: url('/img/photo.jpg');
-      background-size: cover;
-      background-position: center center;
-      background-attachment: fixed;
-      height: 100%;
-      margin: 0;
-      -webkit-animation: slidein 100s infinite alternate;
-      -webkit-background-size: cover;
-      animation: slidein 100s infinite alternate;
-} */
-
 .header {
       width: 100%;
       height: 8vh;
@@ -244,47 +232,78 @@ h1 {
 .section-about {
       display: flex;
       justify-content: center;
-      width: 100%;
+      align-items: center;
+      width: 100vw;
       height: 100vh;
-      background-color: #000;
-      color: #ffffff;
 }
 
-.about-container {
-      width: 900px;
-      height: 600px;
+.about-container{
       display: flex;
       justify-content: center;
       align-items: center;
-      gap: 100px;
+      width: 100vw;
+      height: 100vh;
+      gap: 30px;
       flex-wrap: wrap;
 }
 
-.about-container div {
-      width: 200px;
-      height: 320px;
+.card{
+      background-color: #f3f0f370;
       display: flex;
-      flex-direction: column;
-      justify-content: space-between;
       align-items: center;
-}
-
-.my-job {
-      top: 10%;
+      justify-content: center;
+      text-align: center;
+      flex-direction: column;
+      padding: 0px 50px;
+      width: 300px;
+      min-width: 300px;
+      gap: 20px;
+      height: 70vh;
+      border: 1px solid transparent;
+      border-radius: 15px;
       position: relative;
+      transition: transform 0.5s ease, box-shadow 0.2s;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-.my-job-img {
-      position: relative;
-      top: 25px;
+.card > h3::before {
+      content: "";
+      display: block;
+      width: 200px;
+      height: 1px;
+      background-color: #171616;
+      margin: 5px auto 20px;
 }
 
 
-.my-job-img,
-.photographer-img,
-.about-me-img {
-      width: 150px;
+.card-img{
+      width: 200px;
+      height: 150px;
+      border-radius: 20px;
 }
+
+.card > h3{
+      color: #c33f0e;
+      font-family: "Open Sans", sans-serif;
+      font-weight: 700;
+}
+
+.btn-more-about{
+      padding: 10px 20px;
+      border: none;
+      background-color: #c33f0e;
+      color: #ffffff;
+      font-weight: 600;
+      border-radius: 30px;
+}
+
+.card:hover{
+      cursor: pointer;
+      border: 1px solid #3b3939;
+      transform: scale(1.1);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
 
 @keyframes slidein {
       0% {
@@ -341,32 +360,6 @@ h1 {
             width: 100%;
       }
 }
-
-@media (max-width: 794px) {
-      .my-job {
-            top: 0;
-      }
-
-      .my-job-img,
-      .photographer-img,
-      .about-me-img {
-            width: 100px;
-      }
-
-      .about-container div {
-            height: 250px;
-      }
-
-      .my-job-img {
-            top: 17px;
-      }
-
-      .about-photographer {
-            top: -60px;
-            position: relative;
-      }
-}
-
 
 
 @media (max-width: 668px) {
@@ -447,63 +440,12 @@ h1 {
             font-size: 35px;
       }
 
-      .about-container {
-            gap: 0;
-      }
-
-      .about-container div {
-            height: 220px;
-      }
-
-      .about-container div p {
-            font-size: 12px;
-            width: 150px;
-      }
-
-      .about-container div h4 {
-            font-size: 19px;
-      }
-
-      .about-container div img {
-            width: 90px;
-      }
-
       .section-photos h1 {
             font-size: 25px;
       }
 }
 
 @media (max-width: 400px) {
-      .about-container div {
-            height: 150px;
-      }
-
-      .about-container div p {
-            font-size: 10px;
-            width: 150px;
-      }
-
-      .about-container div h4 {
-            font-size: 17px;
-      }
-
-      .about-container div img {
-            width: 70px;
-      }
-
-      .about-photographer {
-            top: 0;
-      }
-
-      .my-job-img {
-            top: 0px;
-      }
-
-      .about-container {
-            align-items: start;
-            padding-top: 25px;
-      }
-
       .section-photos h1 {
             padding-top: 29px;
       }
