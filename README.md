@@ -83,7 +83,8 @@ Se você gostou do projeto e tem algum feedback, ou se você deseja entrar em co
 
 ## 📸 **Screenshots**
 
-![image](https://github.com/user-attachments/assets/f4a71003-1f2d-4bbe-ad62-d4ada82c5ac1)
+![image](https://github.com/user-attachments/assets/bc6bc446-f3eb-4756-8464-f766ea8b1044)
+
  
 *Exemplo da interface principal do site.*
 
