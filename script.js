@@ -33,8 +33,26 @@ window.addEventListener('DOMContentLoaded', function () {
     const overlay = document.querySelector('.overlay');
     const albumContainer = document.querySelector('.album-container');
 
-    setTimeout(function () {
-        overlay.style.opacity = '0';
-        albumContainer.style.opacity = '1';
-    }, 2500);
+    // Função que vai ser chamada quando o alvo (galeria) estiver visível
+    function handleIntersection(entries, observer) {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                setTimeout(function () {
+                    overlay.style.opacity = '0';  
+                    albumContainer.style.opacity = '1'; 
+                }, 2500);  
+                observer.unobserve(entry.target);
+            }
+        });
+    }
+
+    // Criando o observer para observar a galeria
+    const observer = new IntersectionObserver(handleIntersection, {
+        threshold: 0.2  // A animação acontece quando pelo menos 50% da galeria estiver visível
+    });
+
+    // Observe a seção da galeria
+    const albumSection = document.querySelector('.album-section');
+    observer.observe(albumSection);
 });
+

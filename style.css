@@ -459,6 +459,15 @@ h1 {
             align-items: center;
             padding-top: 30px;
       }
+
+      .album-container{
+            padding: 1rem 1rem;
+      }
+
+      .photo{
+            width: 140px;
+            height: 200px;
+      }
 }
 
 @media (max-width: 360px) {
@@ -480,12 +489,5 @@ h1 {
             margin: 0;
       }
 
-      .album-container{
-            padding: 1rem 1rem;
-      }
 
-      .photo{
-            width: 140px;
-            height: 200px;
-      }
 }
