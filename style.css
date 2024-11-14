@@ -69,7 +69,7 @@ h1 {
       border-bottom: 1px solid rgba(87, 2, 95, 1);
 }
 
-.home-container {
+.home-section {
       display: flex;
       align-items: center;
       justify-content: start;
@@ -133,46 +133,7 @@ h1 {
 }
 
 
-.section-photos {
-      width: 100%;
-      height: 100vh;
-      background-color: #000;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-}
-
-.section-photos h1 {
-      margin-top: 10px;
-      color: #fad6a5;
-      font-size: 2.5em;
-}
-
-.photos-container {
-      width: 900px;
-      height: 400px;
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      margin: 15px;
-      padding-top: 40px;
-}
-
-.photos p {
-      color: #ffffff;
-      padding-left: 10px;
-      width: 100%;
-      height: 35px;
-      align-content: center;
-      background: linear-gradient(to top,
-                  rgba(0, 0, 0, 1),
-                  rgba(0, 0, 0, 0.9) 30%,
-                  rgba(0, 0, 0, 0.7) 60%,
-                  rgba(0, 0, 0, 0.5) 80%,
-                  rgba(0, 0, 0, 0.2) 95%,
-                  transparent 100%)
-}
-
-.photos {
+.photo-item {
       width: 100%;
       height: 100%;
       display: flex;
@@ -181,55 +142,8 @@ h1 {
 
 }
 
-.photo1 {
-      background-image: url('/img/nascimento.jpg');
-      background-repeat: no-repeat;
-      background-size: cover;
 
-}
-
-.photo2 {
-      background-image: url('/img/batom.jpg');
-      background-repeat: no-repeat;
-      background-size: cover;
-}
-
-.photo3 {
-      background-image: url('/img/casamento.jpg');
-      background-repeat: no-repeat;
-      background-size: cover;
-}
-
-.photo4 {
-      background-image: url('/img//gestante.jpg');
-      background-repeat: no-repeat;
-      background-size: cover;
-}
-
-.photo5 {
-      background-image: url('/img/bolo.jpg');
-      background-repeat: no-repeat;
-      background-size: cover;
-}
-
-.photo6 {
-      background-repeat: no-repeat;
-      background-image: url('/img/passaro.jpg');
-      background-size: cover;
-}
-
-.photos:hover {
-      transform: scale(1.2);
-      cursor: pointer;
-      z-index: 1;
-}
-
-.preto-e-branco {
-      filter: grayscale(100%);
-      transition: filter 0.3s;
-}
-
-.section-about {
+.about-section {
       display: flex;
       justify-content: center;
       align-items: center;
@@ -239,7 +153,7 @@ h1 {
       box-sizing: border-box;
 }
 
-.about-container{
+.about-container {
       display: flex;
       justify-content: center;
       align-items: center;
@@ -249,7 +163,7 @@ h1 {
       max-width: 1200px;
 }
 
-.card{
+.card {
       background-color: #f3f0f370;
       display: flex;
       align-items: center;
@@ -269,7 +183,7 @@ h1 {
       position: relative;
 }
 
-.card > h3::before {
+.card>h3::before {
       content: "";
       display: block;
       width: 200px;
@@ -279,20 +193,20 @@ h1 {
 }
 
 
-.card-img{
+.card-img {
       width: 100%;
       max-width: 200px;
-      height: auto;
+      height: 150px;
       border-radius: 20px;
 }
 
-.card > h3{
+.card>h3 {
       color: #c33f0e;
       font-family: "Open Sans", sans-serif;
       font-weight: 700;
 }
 
-.btn-more-about{
+.btn-more-about {
       padding: 10px 20px;
       border: none;
       background-color: #c33f0e;
@@ -301,25 +215,88 @@ h1 {
       border-radius: 30px;
 }
 
-.card:hover{
+.card:hover {
       cursor: pointer;
       border: 1px solid #3b3939;
       transform: scale(1.1);
       box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
+.album-section {
+      position: relative;
+      width: 100%;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #000;
+}
+
+.overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(255, 255, 255, 0.9);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 10;
+      opacity: 1;
+      transition: opacity 2.5s ease-out;
+}
+
+.overlay h1 {
+      font-size: 3rem;
+      color: #000;
+      font-weight: bold;
+      text-transform: uppercase;
+}
+
+.album-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+      width: 100%;
+      min-height: 100vh;
+      background: rgba(255, 255, 255, 0.35);
+      backdrop-filter: blur(13.5px);
+      padding: 2rem 3rem;
+      opacity: 1;
+}
+
+.photo {
+      width: 250px;
+      height: 300px;
+}
+
+.photo>img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border: none;
+      border-radius: 15px;
+      transition: filter 0.3s ease;
+}
+
+
 
 @keyframes slidein {
       0% {
-          background-position: center 10%;   
+            background-position: center 10%;
       }
+
       50% {
-          background-position: center center; 
+            background-position: center center;
       }
+
       100% {
-          background-position: center 10%; 
+            background-position: center 10%;
       }
-  }
+}
 
 @keyframes fadeIn {
       from {
@@ -358,7 +335,7 @@ h1 {
             font-size: 39px;
       }
 
-      .photos-container {
+      .photo-list {
             grid-template-columns: repeat(2, 150px);
             justify-content: center;
             width: 100%;
@@ -464,17 +441,21 @@ h1 {
             font-size: 35px;
       }
 
-      .section-photos h1 {
+      .photo-section h1 {
             font-size: 25px;
+      }
+
+      .photo {
+            width: 175px;
       }
 }
 
 @media (max-width: 400px) {
-      .section-photos h1 {
+      .photo-section h1 {
             padding-top: 29px;
       }
 
-      .section-about {
+      .about-section {
             align-items: center;
             padding-top: 30px;
       }
@@ -490,12 +471,21 @@ h1 {
             padding-left: 50px;
       }
 
-      .home-container {
+      .home-section {
             justify-content: center;
       }
 
       .container {
             width: 90%;
             margin: 0;
+      }
+
+      .album-container{
+            padding: 1rem 1rem;
+      }
+
+      .photo{
+            width: 140px;
+            height: 200px;
       }
 }
