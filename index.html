@@ -12,10 +12,10 @@
       <header class="header">
             <h3 class="logo-title">PHOTOGRAPHY <span class="highlighted-title">STUDIO</span></h3>
             <div class="navigation-buttons">
-                  <button class="navigation-button"><span class="active">HOME</span></button>
-                  <button class="navigation-button">SOBRE</button>
-                  <button class="navigation-button">PORTFÓLIO</button>
-                  <button class="navigation-button">CONTATO</button>
+                  <a href="#home" class="navigation-button"><span class="active">HOME</span></a>
+                  <a href="#sobre" class="navigation-button">SOBRE</a>
+                  <a href="#galeria" class="navigation-button">GALERIA</a>
+                  <a href="#contato" class="navigation-button">CONTATO</a>
             </div>
 
             <div class="hamburger-menu">
@@ -25,7 +25,7 @@
             </div>
       </header>
 
-      <section class="home-section">
+      <section class="home-section" id="home">
             <div class="container">
                   <div class="text-content">
                         <h1>O MUNDO EM <br>APENAS UM <span class="highlighted-title">CLICK</span></h1>
@@ -40,7 +40,7 @@
 
       </section>
 
-      <section class="about-section">
+      <section class="about-section" id="sobre">
             <div class="about-container">
                   <div class="card">
                         <img class="card-img" src="/img/iconphoto.jpg" alt="">
@@ -66,7 +66,7 @@
             </div>
       </section>
 
-      <section class="album-section">
+      <section class="album-section" id="galeria">
             <div class="overlay">
                   <h1>Galeria</h1>
             </div>
@@ -79,6 +79,23 @@
                   <div class="photo"><img src="/img/boy.jpg" alt="" class="photo-img boy"></div>
                   <div class="photo"><img src="/img/nascimento.jpg" alt="" class="photo-img crianca"></div>
                   <div class="photo"><img src="/img/gestante.jpg" alt="" class="photo-img gestante"></div>
+            </div>
+      </section>
+
+      <section class="contact-section" id="contato">
+            <div class="contact-container">
+                  <div class="contact-forms">
+                        <h2>CONTATO</h2>
+                        <form>
+                              <input type="text" name="nome" id="nome" placeholder="* Nome">
+                              <input type="email" name="email" id="email" placeholder="* Email">
+                              <input type="text" name="telefone" id="telefone" placeholder="* Telefone">
+                              <input type="text" name="mensagem" id="mensagem" placeholder="Mensagem">
+                              <input type="submit" value="Enviar" id="enviar">
+                              <span class="error">Os campos * são obrigatórios</span>
+
+                        </form>
+                  </div>
             </div>
       </section>
 
