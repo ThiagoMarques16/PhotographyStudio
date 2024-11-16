@@ -8,7 +8,7 @@
 
 Este projeto consiste em um **site de portfólio fotográfico**, desenvolvido com o objetivo de **expor os trabalhos de um fotógrafo** e atrair novos clientes. O site foi criado para ser **visualmente atraente**, porém **clean e objetivo**, com foco em facilitar a navegação e destacar as imagens. O objetivo é garantir que o visitante tenha uma **experiência simples e fluida**, sem sobrecarga de informações.
 
-**Status do Projeto**: 🚧 **Em Andamento/Desenvolvimento** 🚧  
+**Status do Projeto**: 🚧 **Em Concluído/Desenvolvido** 🚧  
 Atualmente, o site ainda está em desenvolvimento, com algumas funcionalidades em fase de aprimoramento. Agradeço pela paciência enquanto continuo implementando melhorias e recursos adicionais!
 
 ### 🚀 **Objetivos:**
@@ -87,4 +87,6 @@ Se você gostou do projeto e tem algum feedback, ou se você deseja entrar em co
 
  
 *Exemplo da interface principal do site.*
+
+https://photographystudiodev.netlify.app/
 
